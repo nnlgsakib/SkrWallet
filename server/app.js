@@ -11,9 +11,6 @@ const index = require('./routes/index')
 const users = require('./routes/users')
 
 const cors = require('koa2-cors');
-const koaStaticCache = require('koa-static-cache');
-
-
 
 // error handler
 onerror(app)
@@ -26,14 +23,6 @@ app.use(json())
 app.use(logger())
 app.use(require('koa-static')(path.resolve(__dirname,'../dist')));
 
-/*app.use( koaStaticCache({
-    // prefix: '/public',
-    dir: '../public/',
-    preload: true,
-    dynamic: true
-}) );*/
-
-
 // logger
 app.use(async (ctx, next) => {
   const start = new Date()
@@ -42,7 +31,7 @@ app.use(async (ctx, next) => {
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
 });
 
-//cors跨域
+// cross-origin
 app.use(cors());
 
 // routes
