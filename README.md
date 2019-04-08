@@ -20,5 +20,3 @@ after npm run serve,then link http://127.0.0.1:3000 to access the project
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
