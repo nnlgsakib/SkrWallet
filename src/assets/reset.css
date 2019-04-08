@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after, *::before {
+    box-sizing: border-box;
+}
+
+ul, ol, dl {
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+@font-face {
+    font-family: 'modak';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./modak.woff2) format('woff2');
+}
+
+@media screen and (max-width: 420px) {
+    .iziToast-wrapper-bottomCenter,.iziToast-wrapper-bottomRight {
+        transform: translateY(-120%)!important;
+        bottom:unset!important;
+    }
+}
+
+
+
